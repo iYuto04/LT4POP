@@ -1,6 +1,6 @@
 <!-- $theme: default -->
 
-# 久々のLT
+### 久々のLT
 - お久しぶりです
 - 最近は割とandroidの開発でjavaを書いていました
 - 久しぶりにめちゃくちゃswift書きたくなっています
@@ -9,7 +9,7 @@
 - React nativeに負けるな!
 
 ---
-# 今日の話題
+### 今日の話題
 <div style="text-align: center">
 <font size = "15">OOP</font><br>
 ↓ <br>
@@ -17,7 +17,7 @@
 </div>
 
 ---
-# OOPってなんだっけ?
+### OOPってなんだっけ?
 OOP(Object Oriented Programing)
 オブジェクト指向プログラミング
 - クラス
@@ -27,23 +27,23 @@ OOP(Object Oriented Programing)
 データと処理をひとまとめにして共通部分を括りだして実装できるのがいいよねー
 
 ---
-# POPってなに?
+### POPってなに?
 POP(Protocol Oriented Programing)
 プロトコル指向プログラミング
 プロトコルの詳細はまたのちほど
 
 ---
 
-# OOPは概念的にすばらしい!
+### OOPは概念的にすばらしい!
 って前回熱く語りました.
 すばらしい,大変素晴らしい.でもappleはPOPを推奨している.
-![](/Users/yuto/Documents/million_swift/LT4POP/img/protocol.png)
+![](/img/protocol.png)
 
 こんな風に標準ライブラリでもprotocolで書かれてるところが多く見られる.(そしてこれはPOPを用いる際良いお手本とされている)
 
 ---
 
-# protocolって何?
+### protocolって何?
 プロトコルとは「型のインターフェースを定義するもの」
 はい,でましたよくわからない説明
 噛み砕いて言うと「型が持つべきプロパティとメソッドを定義するもの」
@@ -66,5 +66,3 @@ struct SomeStruct1: SomeProtocol{
 
 
 ```
-
-
