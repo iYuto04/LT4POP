@@ -39,7 +39,7 @@ POP(Protocol Oriented Programing)
 すばらしい,大変素晴らしい.でもappleはPOPを推奨している.
 ![](/img/protocol.png)
 
-こんな風に標準ライブラリでもprotocolで書かれてるところが多く見られる.(そしてこれはPOPを用いる際良いお手本とされている)
+こんな風に標準ライブラリでもprotocolで書かれてるところが多く見られる.
 
 ---
 
@@ -65,4 +65,52 @@ struct SomeStruct1: SomeProtocol{
 }
 
 
+```
+
+---
+POPとはこのように「プロトコル」と「構造体」を中心としたプログラミングの方法である.
+
+いや,僕の印象としては構造体を中心としたプログラミングをするためにプロトコルを使うという印象である.
+
+---
+
+|クラス|構造体|
+|--|--|
+|参照型|値型|
+|継承可|継承不可|
+
+---
+
+え?継承不可なら冗長なコード増えるくない?  
+↓  
+そうならないようにプロトコルを使うのです.
+
+---
+
+そもそもクラスでよくない?  
+↓  
+参照型を使うことによる予期しないバグが生まれる可能性があるので,できるだけ値型を使おうという指針.
+参照型の方が適しているような場面においては参照型のクラスを使っていこうというように使い分ける.
+
+---
+### extensionを用いたプロトコルの実装
+```swift
+protocol Item {
+	var name: String{ get }
+	var category: String{ get}
+}
+extension Item {
+  var description: String{
+		return "商品名: \(name), カテゴリ: \(category)"
+	}
+}
+struct Book: Item {
+    let name: String
+		var category: String{
+			return "書籍"
+		}
+}
+
+let book = Book(name: "Swift実践入門")
+print(book.description) //商品名: Swift実践入門, カテゴリ: 書籍
 ```
